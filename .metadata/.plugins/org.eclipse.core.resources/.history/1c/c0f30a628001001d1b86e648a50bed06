@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="com.kh.model.vo.Person" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>el페이지</title>
+</head>
+<body>
+	
+	<h1>EL 기본구문</h1>
+	
+	<h3>1. 기존 방식대로 스크립틀릿과 표현식을 이용해서 각 영역에 담겨있는 값 뽑아서 화면에 출력</h3>
+	
+	<%
+		// requestScope에 담긴 값 뽑기 => classRoom, student
+		String classRoom = (String)request.getAttribute("classRoom");
+		Person student = (Person)request.getAttribute("student");
+	
+	
+	
+	
+	%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

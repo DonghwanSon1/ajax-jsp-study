@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.kh.common.JDBCTemplate"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.kh.board.model.vo.Category"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload"/>
+<fullyQualifiedTypeName name="com.kh.board.model.vo.Board"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicTabbedPaneUI"/>
+<fullyQualifiedTypeName name="com.kh.board.model.vo.Attachment"/>
+<fullyQualifiedTypeName name="ajaxProject.com.kh.model.vo.Member"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="com.kh.member.model.vo.Member"/>
+<fullyQualifiedTypeName name="com.kh.board.model.vo.Reply"/>
+</qualifiedTypeNameHistroy>

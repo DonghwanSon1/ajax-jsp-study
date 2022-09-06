@@ -1,0 +1,75 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="com.kh.model.vo.Person" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>el페이지</title>
+</head>
+<body>
+	
+	<h1>EL 기본구문</h1>
+	<%--
+	<h3>1. 기존 방식대로 스크립틀릿과 표현식을 이용해서 각 영역에 담겨있는 값 뽑아서 화면에 출력</h3>
+	
+	<%
+		// requestScope에 담긴 값 뽑기 => classRoom, student
+		String classRoom = (String)request.getAttribute("classRoom");
+		Person student = (Person)request.getAttribute("student");
+	
+		// sessionScope에 담긴 값 뽑기 => academy, teacher
+		String academy = (String)session.getAttribute("academy");
+		Person teacher = (Person)session.getAttribute("teacher");
+	
+	%>
+
+
+	<p>
+		학원명 : <%= academy %> <br>
+		강의장 : <%= classRoom	 %> <br>
+		강사정보 : <%= teacher.getName() %>, <%= teacher.getAge() %>, <%= teacher.getGender() %> <br>
+		
+		수강생 정보 <br>
+		<ul>
+			<li>이름 : <%= student.getName() %></li>
+			<li>나이 : <%= student.getAge() %></li>
+			<li>성별 : <%= student.getGender() %></li>
+		</ul>
+	</p>
+	--%>	
+
+	<hr>
+	
+	<h3>2. EL을 이용해서 보다 쉽게 해당 Scope에 저장된 값들을 출력하기</h3>
+	
+	<p>
+		EL은 getXXX(getAttribute, getter메소드들)을 통해 값을 빼올 필요 없이 키 값만 제시하면 바로 값에 접근 가능 <br>
+		내부적으로 해당 Scope영역에 해당 키값에 해당하는 밸류값으 가져올 수 있다.<br>
+		기본적으로 EL은 JSP내장객체 종류(4가지)를 구분하지 않고 자동적으로 모든 내장객체에서 키값을 검색해서 존재하는 경우 값을 가져옴
+	</p>	
+
+	<p>
+		학원명 : ${ academy } <br>
+		강의장 : ${ classRoom } <br>
+		강사정보 : ${ teacher.name }, ${ teacher.age }, ${ teacher.gender } <br>
+		
+		수강생 정보
+		<ul>
+			<li>이름 : ${ student.name }</li>
+			<li>나이 : ${ student.age }</li>
+			<li>성별 : ${ student.gender }</li>
+		</ul>
+	</p>	
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

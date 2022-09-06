@@ -1,0 +1,82 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정말 중요한 core 페이지</title>
+</head>
+<body>
+
+
+	<h1>JSTL Core Library</h1>
+	
+	<h3>1. 변수(속성 == attribute)</h3>
+	
+	<pre>
+		* 변수 선언 (&lt;c:set var="변수명" value="리터럴" scope="스코프영역지정(생략가능)" /&gt;)
+		- 변수를 선언하고 초기값을 대입해두는 기능을 제공
+		- 더나아가서 해당 변수를 어떤 scope영역에 담아둘건지 지정 가능함
+			(scope속성 생략 시 pageScope에 담김)
+		=> 즉, 해당 scope영역에 setAttribute라는 메서드를 이용해서
+			key + value형태로 데이터를 담아둔다라고 생각하면 된다.
+		=> c:set을 통해 선언된 변수는 EL로 접근해서 사용 가능 (스크립팅 원소로는 접근 불가능)
+	
+		* 주의사항
+		- 변수의 타입을 별도로 지정하지 않음(초기값을 반드시 지정해둬야됌!!!)
+	</pre>
+	
+	<c:set var="num1" value="10"></c:set> <!-- pageScope에 담김 pageContext.setAttribute("num1", "10"); -->
+	<c:set var="num2" value="20" scope="request"></c:set> <!-- requestScope에 담김 request.setAttribute("num2", "20"); -->
+	
+	num1의 변수값 : ${ num1 } <br>
+	num2의 변수값 : ${ num2 } <br>
+	
+	<c:set var="result" value="${ num1 + num2 }" scope="session"></c:set>
+	
+	result변수값 : ${ result } <br>
+	
+	<!-- 
+		변수명만 제시하면 공유범위가 작은 곳에서부터 찾음
+		: 티가 나지는 않지만 속도가 느려질수도 있다.(스코프영역.변수명 을 권장)
+	 -->
+	
+	${ pageScope.num1 } <br>
+	${ requestScope.num2 } <br>
+	${ sessionScope.result } <br><br>	
+	
+	<c:set var="result" scope="request"	>9999</c:set>
+	<!-- value속성 말고 시작태그와 종료태그 사이에도 대입할 값을 기술 가능 -->
+	
+	${ requestScope.result } <br>
+	${ sessionScope.result } <br>
+	
+	<hr>
+	
+	<pre>
+		* 변수 삭제(&lt;c:remove var="제거하고자하는 변수명" scope="스코프영역지정가능(생략가능)" /&gt;)
+		- 해당 변수를 scope에서 찾아서 제거하는 태그
+		- scope지정 생략시 모든 scope에서 해당 변수를 다 찾아서 제거함
+		=> 즉, 해당 scope에 .removeAttribute("키값"); 이용해서 제거하는거라고 생각하면 된다.
+	</pre>
+	
+	삭제 전 result : ${ result } <br>
+	1) 특정 scope를 지정해서 삭제 <br>
+	<c:remove var="result" scope="request" />
+	
+	request 삭제 후 result : ${ result } <br>
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+</body>
+</html>

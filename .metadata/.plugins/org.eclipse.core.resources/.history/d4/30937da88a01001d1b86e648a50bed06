@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>el 연산자 페이지</title>
+</head>
+<body>
+
+	<h1>EL 연산</h1>
+	
+	<h3>1. 산술 연산</h3>
+	
+	<p>
+		* 기존 방식 <br>
+		10 + 3 = <%= (int)request.getAttribute("big") + (int)request.getAttribute("small") %>
+	</p>
+
+	<p>
+		* EL 연산 <br>
+		10 + 3 = ${ big + small } <br>
+		10 - 3 = ${ big - small } <br>
+		10 X 3 = ${ big * small } <br>
+		10 / 3 = ${ big / small } 또는 ${ big div samll }<br>
+	</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

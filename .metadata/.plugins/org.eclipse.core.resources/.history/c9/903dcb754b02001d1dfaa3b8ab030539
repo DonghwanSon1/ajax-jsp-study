@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>formatting 페이지</title>
+</head>
+<body>
+	
+	<!-- 
+		Unknown Tag : 라이브러리 선언을 안해서 나는 오류 = taglib지시어를 안썻다.
+		No end tag : 닫는 태그를 안썻다.
+	 -->
+
+	<h1>1. formatNumber 태그</h1>
+	
+	<p>
+		숫자형 데이터의 포맷(형식)을 지정<br>
+		- 표현하고자하는 숫자 데이터의 형식을 통화기로, %등 원하는 쓰임에 맞게 지정하는 태그 <br>
+		
+		[ 표현법 ] <br>
+		
+		&lt;fmt:formatNumber value="출력할 값" groupingUsed="true/false" type="percent/currency" currenySymbol="$" /&gt; <br>
+		
+		groupingUsed, type, currenySymbol 생략이 가능
+	</p>
+
+	<br>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
